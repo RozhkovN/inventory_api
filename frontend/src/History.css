@@ -1,0 +1,145 @@
+.history {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.history h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.filters-panel {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 150px;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #555;
+  font-size: 13px;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.history-list {
+  display: grid;
+  gap: 15px;
+}
+
+.history-item {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #999;
+  transition: all 0.3s ease;
+}
+
+.history-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.operation-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  white-space: nowrap;
+  height: fit-content;
+  min-width: 100px;
+  text-align: center;
+}
+
+.history-content {
+  flex: 1;
+}
+
+.history-content h4 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.timestamp {
+  color: #999;
+  font-size: 12px;
+  margin: 0 0 12px 0;
+}
+
+.operation-details {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span {
+  color: #666;
+}
+
+.detail-row strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.detail-row em {
+  color: #2196F3;
+  font-style: italic;
+}
+
+.positive {
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+.negative {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}

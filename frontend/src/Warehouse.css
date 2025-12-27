@@ -1,0 +1,129 @@
+.warehouse {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.warehouse-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.warehouse-header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit {
+  background: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.btn-delete {
+  background: #f44336;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.btn-edit:hover {
+  background: #45a049;
+}
+
+.btn-delete:hover {
+  background: #da190b;
+}
+
+.btn-primary {
+  background: #2196F3;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background: #0b7dda;
+}
+
+.btn-cancel {
+  background: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-cancel:hover {
+  background: #5a6268;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 12px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+}

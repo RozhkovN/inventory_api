@@ -1,0 +1,200 @@
+.sales {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.sales-header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.filter-box {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-box label {
+  font-weight: 600;
+}
+
+.filter-box select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.sales-list {
+  display: grid;
+  gap: 20px;
+}
+
+.sale-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sale-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.sale-header-card h3 {
+  color: #333;
+  margin: 0;
+}
+
+.sale-id {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.sale-status select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.sale-items {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.sale-items table {
+  width: 100%;
+  margin: 0;
+  border: 1px solid #eee;
+}
+
+.sale-items table td,
+.sale-items table th {
+  padding: 10px;
+  text-align: right;
+  border: none;
+}
+
+.sale-items table td:first-child,
+.sale-items table th:first-child {
+  text-align: left;
+}
+
+.sale-totals {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.total-row:last-child {
+  margin-bottom: 0;
+}
+
+.total-row.profit {
+  color: #27ae60;
+  font-weight: 600;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.sale-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-remove {
+  background: #f44336;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  min-width: auto;
+}
+
+.btn-secondary {
+  background: #607D8B;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn-secondary:hover {
+  background: #455A64;
+}
+
+.modal-large {
+  max-width: 600px;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  align-items: flex-end;
+}
+
+.item-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-field label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.item-field input,
+.item-field select {
+  padding: 8px;
+  font-size: 13px;
+}
+
+.sale-preview {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 18px;
+  color: #27ae60;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  flex: 1;
+}

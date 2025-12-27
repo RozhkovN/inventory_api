@@ -1,0 +1,67 @@
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.venv/
+venv/
+ENV/
+env/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker
+.dockerignore
+
+# Environment variables
+.env.local
+.env.*.local
+
+# Build outputs
+frontend/build/
+backend/dist/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Project specific
+postgres_data/
