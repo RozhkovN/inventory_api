@@ -85,24 +85,13 @@ def delete_product(id: int, db: Session = Depends(get_db)):
     if not product:
         raise HTTPException(404, "Товар не найден")
     
-    # Логируем удаление товара перед удалением
-    if product.quantity > 0:
-        stock_op = StockOperation(
-            product_id=id,
-            operation_type="CORRECTION",
-            quantity_change=-product.quantity,
-            old_quantity=product.quantity,
-            new_quantity=0,
-            old_price=product.purchase_price,
-            new_price=product.purchase_price,
-            old_coefficient=product.coefficient,
-            new_coefficient=product.coefficient
-        )
-        db.add(stock_op)
+    # Сначала удаляем все связанные записи в stock_operations
+    db.query(StockOperation).filter(StockOperation.product_id == id).delete()
     
+    # Затем удаляем сам товар
     db.delete(product)
     db.commit()
-    return {"detail": "Товар удалён"}
+    return {"detail": "Товар и его история удалены"}
 
 
 @router.get("/stock-history", response_model=List[StockOperationResponse], summary="История операций со складом")
