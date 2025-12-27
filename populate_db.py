@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 import random
 
 # Конфигурация
-API_BASE_URL = "http://localhost:8700/api"
+API_BASE_URL = "http://80.253.19.93:8700/api"
 DELAY = 0.2  # Задержка между запросами (сек)
 
 # Цвета для консоли
