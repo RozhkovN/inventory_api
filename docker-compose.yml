@@ -48,6 +48,7 @@ services:
     ports:
       - "3700:3700"
     environment:
+      PORT: 3700
       REACT_APP_API_URL: http://backend:8700/api
     depends_on:
       - backend
