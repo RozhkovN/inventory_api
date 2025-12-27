@@ -83,6 +83,26 @@ function Sales() {
     e.preventDefault();
     setLoading(true);
     try {
+      // Валидация: проверяем что все количества положительные
+      for (let item of formData.items) {
+        const qty = parseInt(item.quantity);
+        if (!item.product_id) {
+          setMessage('❌ Выбери товар');
+          setLoading(false);
+          return;
+        }
+        if (!item.quantity || qty <= 0) {
+          setMessage('❌ Количество должно быть больше 0');
+          setLoading(false);
+          return;
+        }
+        if (!item.sold_price_per_unit || parseFloat(item.sold_price_per_unit) <= 0) {
+          setMessage('❌ Цена должна быть больше 0');
+          setLoading(false);
+          return;
+        }
+      }
+
       const payload = {
         client_name: formData.client_name,
         items: formData.items.map(item => ({
@@ -285,6 +305,8 @@ function Sales() {
                       type="number"
                       value={item.quantity}
                       onChange={(e) => handleItemChange(index, 'quantity', e.target.value)}
+                      min="1"
+                      step="1"
                       required
                     />
                   </div>

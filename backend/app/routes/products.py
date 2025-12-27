@@ -79,13 +79,27 @@ def update_product(id: int, update: ProductUpdate, db: Session = Depends(get_db)
     db.commit()
     return db_product
 
-@router.delete("/products/{id}", summary="Удалить товар (только если qty=0)")
+@router.delete("/products/{id}", summary="Удалить товар")
 def delete_product(id: int, db: Session = Depends(get_db)):
     product = db.query(Product).filter(Product.id == id).first()
     if not product:
         raise HTTPException(404, "Товар не найден")
-    if product.quantity != 0:
-        raise HTTPException(400, "Нельзя удалить товар с остатком")
+    
+    # Логируем удаление товара перед удалением
+    if product.quantity > 0:
+        stock_op = StockOperation(
+            product_id=id,
+            operation_type="CORRECTION",
+            quantity_change=-product.quantity,
+            old_quantity=product.quantity,
+            new_quantity=0,
+            old_price=product.purchase_price,
+            new_price=product.purchase_price,
+            old_coefficient=product.coefficient,
+            new_coefficient=product.coefficient
+        )
+        db.add(stock_op)
+    
     db.delete(product)
     db.commit()
     return {"detail": "Товар удалён"}
